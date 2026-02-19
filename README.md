@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://drive.google.com/file/d/1V-TvQrUOUO77U8yA5_BDz1fEC466NFzQ/view?usp=sharing" />
+<img width="1200" height="475" alt="GHBanner" src="https://drive.google.com/file/d/1V-TvQrUOUO77U8yA5_BDz1fEC466NFzQ/">
 </div>
 
 # Run and deploy 
