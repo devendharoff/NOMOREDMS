@@ -1,0 +1,179 @@
+
+> nomoredms---creator-resource-hub@0.0.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\deven\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\deven\Downloads\nomoredms---creator-resource-hub (2)\package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 5 errors:
+./Downloads/nomoredms---creator-resource-hub (2)/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module 'tailwindcss'
+Require stack:
+- C:\Users\deven\Downloads\nomoredms---creator-resource-hub (2)\.next\build\chunks\[root-of-the-server]__0ae9966c._.js
+- C:\Users\deven\Downloads\nomoredms---creator-resource-hub (2)\.next\build\chunks\[turbopack]_runtime.js
+- C:\Users\deven\Downloads\nomoredms---creator-resource-hub (2)\.next\build\postcss.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1448:15)]
+    [at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)]
+    [at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)]
+    [at Module._load (node:internal/modules/cjs/loader:1234:25)]
+    [at TracingChannel.traceSync (node:diagnostics_channel:328:14)]
+    [at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)]
+    [at Module.require (node:internal/modules/cjs/loader:1548:12)]
+    [at require (node:internal/modules/helpers:152:16)]
+    at turbopack:///[turbopack-node]/transforms/postcss.ts:49:25 [C:\Users\deven\Downloads\nomoredms---creator-resource-hub (2)\.next\build\chunks\[root-of-the-server]__0ae9966c._.js:135:33]
+    [at <anonymous>]
+
+Import trace:
+  Client Component Browser:
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/globals.css [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/layout.tsx [Server Component]
+
+
+./Downloads/nomoredms---creator-resource-hub (2)/components/MobileNav.tsx:5:10
+Ecmascript file had an error
+[0m [90m 3 |[39m [36mimport[39m { [33mZap[39m[33m,[39m [33mFlame[39m[33m,[39m [33mSearch[39m[33m,[39m [33mShieldAlert[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m'next/link'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { usePathname } [36mfrom[39m [32m'next/navigation'[39m[33m;[39m
+ [90m   |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m
+ [90m 7 |[39m [36minterface[39m [33mMobileNavProps[39m {
+ [90m 8 |[39m   onOpenSearch[33m?[39m[33m:[39m () [33m=>[39m [36mvoid[39m[33m;[39m[0m
+
+You're importing a component that needs `usePathname`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/MobileNav.tsx
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/creator/[slug]/page.tsx
+
+  Client Component Browser:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/MobileNav.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/MobileNav.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+
+./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx:2:35
+Ecmascript file had an error
+[0m [90m 1 |[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState[33m,[39m useRef[33m,[39m useEffect[33m,[39m memo } [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m   |[39m                                   [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m { motion[33m,[39m [33mAnimatePresence[39m } [36mfrom[39m [32m'framer-motion'[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mExternalLink[39m[33m,[39m [33mMoreVertical[39m[33m,[39m [33mFlag[39m[33m,[39m [33mCalendar[39m[33m,[39m [33mShieldCheck[39m[33m,[39m [33mCopy[39m[33m,[39m [33mCheck[39m[33m,[39m [33mChevronDown[39m[33m,[39m [33mChevronUp[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mResource[39m[33m,[39m [33mCreator[39m } [36mfrom[39m [32m'../types.ts'[39m[33m;[39m[0m
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/creator/[slug]/page.tsx
+
+  Client Component Browser:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+
+./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx:2:27
+Ecmascript file had an error
+[0m [90m 1 |[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState[33m,[39m useRef[33m,[39m useEffect[33m,[39m memo } [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m   |[39m                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m { motion[33m,[39m [33mAnimatePresence[39m } [36mfrom[39m [32m'framer-motion'[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mExternalLink[39m[33m,[39m [33mMoreVertical[39m[33m,[39m [33mFlag[39m[33m,[39m [33mCalendar[39m[33m,[39m [33mShieldCheck[39m[33m,[39m [33mCopy[39m[33m,[39m [33mCheck[39m[33m,[39m [33mChevronDown[39m[33m,[39m [33mChevronUp[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mResource[39m[33m,[39m [33mCreator[39m } [36mfrom[39m [32m'../types.ts'[39m[33m;[39m[0m
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/creator/[slug]/page.tsx
+
+  Client Component Browser:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+
+./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx:2:17
+Ecmascript file had an error
+[0m [90m 1 |[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mReact[39m[33m,[39m { useState[33m,[39m useRef[33m,[39m useEffect[33m,[39m memo } [36mfrom[39m [32m'react'[39m[33m;[39m
+ [90m   |[39m                 [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m { motion[33m,[39m [33mAnimatePresence[39m } [36mfrom[39m [32m'framer-motion'[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mExternalLink[39m[33m,[39m [33mMoreVertical[39m[33m,[39m [33mFlag[39m[33m,[39m [33mCalendar[39m[33m,[39m [33mShieldCheck[39m[33m,[39m [33mCopy[39m[33m,[39m [33mCheck[39m[33m,[39m [33mChevronDown[39m[33m,[39m [33mChevronUp[39m } [36mfrom[39m [32m'lucide-react'[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m { [33mResource[39m[33m,[39m [33mCreator[39m } [36mfrom[39m [32m'../types.ts'[39m[33m;[39m[0m
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/creator/[slug]/page.tsx
+
+  Client Component Browser:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component Browser]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Client Component SSR]
+    ./Downloads/nomoredms---creator-resource-hub (2)/components/HomeContent.tsx [Server Component]
+    ./Downloads/nomoredms---creator-resource-hub (2)/app/page.tsx [Server Component]
+
+
+    at <unknown> (./Downloads/nomoredms---creator-resource-hub (2)/components/MobileNav.tsx:5:10)
+    at <unknown> (./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx:2:35)
+    at <unknown> (./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx:2:27)
+    at <unknown> (./Downloads/nomoredms---creator-resource-hub (2)/components/ResourceCard.tsx:2:17)
