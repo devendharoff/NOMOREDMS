@@ -94,11 +94,11 @@ export const MOCK_RESOURCES: Resource[] = [
     description: 'An advanced VS Code extension that predicts your next 50 lines of code with 90% accuracy.',
     category: 'AI Tools',
     tags: ['#AI', '#Coding'],
-    thumbnail: 'https://picsum.photos/seed/p1/600/400',
+    thumbnail: 'https://images.unsplash.com/photo-1627398240445-5643e2609c13?q=80&w=800&auto=format&fit=crop',
     date: 'Dec 01, 2024',
     url: 'https://codefast.ai',
-    status: 'pending',
-    health: 'error'
+    status: 'live',
+    health: 'ok'
   },
   {
     id: 'p2',
@@ -107,10 +107,10 @@ export const MOCK_RESOURCES: Resource[] = [
     description: 'Stop building from scratch. Use these pre-built, perfectly responsive components.',
     category: 'Design',
     tags: ['#Figma', '#Design'],
-    thumbnail: 'https://picsum.photos/seed/p2/600/400',
+    thumbnail: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop',
     date: 'Dec 02, 2024',
     url: 'https://figma.com/community/file/xyz',
-    status: 'pending',
+    status: 'live',
     health: 'ok'
   },
   {
@@ -120,10 +120,10 @@ export const MOCK_RESOURCES: Resource[] = [
     description: 'The exact script I used to automate my Twitter growth using Gemini Pro and Tweepy.',
     category: 'Automation',
     tags: ['#Python', '#Twitter'],
-    thumbnail: 'https://picsum.photos/seed/p3/600/400',
+    thumbnail: 'https://images.unsplash.com/photo-1611605698335-8b1569810432?q=80&w=800&auto=format&fit=crop',
     date: 'Dec 03, 2024',
     url: 'https://github.com/vagera/twitter-bot',
-    status: 'pending',
+    status: 'live',
     health: 'ok'
   },
   {
@@ -133,10 +133,10 @@ export const MOCK_RESOURCES: Resource[] = [
     description: 'A curated list of free and paid font pairings optimized for high-conversion SaaS landing pages.',
     category: 'Design',
     tags: ['#SaaS', '#Typography'],
-    thumbnail: 'https://picsum.photos/seed/p4/600/400',
+    thumbnail: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop',
     date: 'Dec 04, 2024',
     url: 'https://google.com/fonts',
-    status: 'pending',
+    status: 'live',
     health: 'ok'
   },
   {
@@ -146,10 +146,36 @@ export const MOCK_RESOURCES: Resource[] = [
     description: 'The secret technique for building truly adaptive components without media query hell.',
     category: 'Design',
     tags: ['#CSS', '#Responsiveness'],
-    thumbnail: 'https://picsum.photos/seed/p5/600/400',
+    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
     date: 'Dec 05, 2024',
     url: 'https://youtube.com/watch?v=123',
     status: 'pending',
+    health: 'ok'
+  },
+  {
+    id: 'p6',
+    creatorId: 'c1',
+    title: 'Full-Stack Next.js 15 Starter Kit',
+    description: 'My personal boilerplate with Next.js 15, Turbopack, Supabase, Tailwind, and Stripe ready to go.',
+    category: 'Coding',
+    tags: ['#NextJS', '#Boilerplate'],
+    thumbnail: 'https://images.unsplash.com/photo-1618477247222-ac60ceb0a416?q=80&w=800&auto=format&fit=crop',
+    date: 'Dec 10, 2024',
+    url: 'https://github.com/devender/next-starter',
+    status: 'live',
+    health: 'ok'
+  },
+  {
+    id: 'p7',
+    creatorId: 'c4',
+    title: 'Make.com Blueprints: 10 Automation Workflows',
+    description: 'Pre-configured Make.com blueprints to automate your CRM, emails, and social media posting.',
+    category: 'Automation',
+    tags: ['#Make', '#NoCode'],
+    thumbnail: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+    date: 'Dec 12, 2024',
+    url: 'https://make.com/templates',
+    status: 'live',
     health: 'ok'
   }
 ];

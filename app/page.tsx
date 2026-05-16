@@ -11,12 +11,23 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ l
     const { data: creatorsData } = await supabase.from('creators').select('*').order('followers_count', { ascending: false }).limit(40);
     const { data: resourcesData } = await supabase.from('resources').select('*').order('created_at', { ascending: false }).limit(60);
 
-    // Fallback to mocks if DB fails or is empty (safety net)
-    const creatorsRaw = (creatorsData && creatorsData.length > 0) ? creatorsData : [];
-    const resourcesRaw = (resourcesData && resourcesData.length > 0) ? resourcesData : [];
+    // Merge database items with mock items to ensure the site always looks populated
+    const creatorsRaw = creatorsData || [];
+    const resourcesRaw = resourcesData || [];
 
-    const creators = creatorsRaw.length > 0 ? creatorsRaw.map(mapCreator) : MOCK_CREATORS;
-    const resources = resourcesRaw.length > 0 ? resourcesRaw.map(mapResource) : MOCK_RESOURCES;
+    const dbCreators = creatorsRaw.map(mapCreator);
+    const dbResources = resourcesRaw.map(mapResource);
+
+    // Combine them, avoiding duplicates by ID or slug
+    const creators = [
+        ...dbCreators, 
+        ...MOCK_CREATORS.filter(mc => !dbCreators.find(c => c.slug === mc.slug || c.id === mc.id))
+    ];
+    
+    const resources = [
+        ...dbResources, 
+        ...MOCK_RESOURCES.filter(mr => !dbResources.find(r => r.id === mr.id || r.url === mr.url))
+    ];
 
     const params = await searchParams;
 
